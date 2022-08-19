@@ -1,4 +1,4 @@
-package com.example.employeemanager;
+package com.example.employeemanager.resource;
 
 import com.example.employeemanager.model.Employee;
 import com.example.employeemanager.service.EmployeeService;
@@ -44,6 +44,6 @@ public class EmployeeResource {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteEmployee(@PathVariable("id") Long id) {
         employeeService.deleteEmployee(id);
-        return new ResponseEntity<>( HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
